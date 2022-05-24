@@ -1,0 +1,124 @@
+__default__:
+  jobname: "default"
+  mem: "16G"
+  cpus: 4
+  time: "48:00:00"
+
+## Reference ## 
+
+cp_reference:
+  jobname: "cp_reference"
+  mem: "4G"
+  cpus: 1
+  time: "01:00:00"
+  
+bwa_index:
+  jobname: "bwa_index"
+  mem: "4G"
+  cpus: 1
+  time: "01:00:00"
+
+samtools_faidx:
+  jobname: "samtools_faidx"
+  mem: "4G"
+  cpus: 1
+  time: "01:00:00"
+  
+## Reads ## 
+
+trimmomatic:
+  jobname: "trimmomatic"
+  mem: "16G"
+  cpus: 4
+  time: "10:00:00"
+  
+fastqc:
+  jobname: "fastqc"
+  mem: "16G"
+  cpus: 4
+  time: "48:00:00"
+
+## Alignments ##
+
+bwa_mem:
+  jobname: "bwa_mem"
+  mem: "100G"
+  cpus: 10
+  time: "96:00:00"
+  
+samtools_view:
+  jobname: "samtools_view"
+  mem: "4G"
+  cpus: 1
+  time: "10:00:00"
+  
+samtools_sort:
+  jobname: "samtools_sort"
+  mem: "4G"
+  cpus: 1
+  time: "10:00:00"
+
+samtools_index:
+  jobname: "samtools_index"
+  mem: "4G"
+  cpus: 1
+  time: "10:00:00"
+  
+gatk_markduplicates:
+  jobname: "gatk_markduplicates"
+  mem: "100G"
+  cpus: 1
+  time: "48:00:00"
+  
+samtools_view_md:
+  jobname: "samtools_view_md"
+  mem: "4G"
+  cpus: 1
+  time: "10:00:00"
+  
+samtools_index_md:
+  jobname: "samtools_index_md"
+  mem: "16G"
+  cpus: 4
+  time: "10:00:00"
+  
+samtools_stats:
+  jobname: "samtools_stats"
+  mem: "16G"
+  cpus: 4
+  time: "10:00:00"
+
+mosdepth:
+  jobname: "mosdepth"
+  mem: "16G"
+  cpus: 4
+  time: "10:00:00"
+  
+## Mutations ##
+
+strelka2:
+  jobname: "strelka2"
+  mem: "100G"
+  cpus: 10
+  time: "96:00:00"
+
+strelka2tsv:
+  jobname: "strelka2tsv"
+  mem: "10G"
+  cpus: 1
+  time: "10:00:00"
+  
+strelka2sql:
+  jobname: "strelka2sql"
+  mem: "10G"
+  cpus: 1
+  time: "10:00:00"
+  
+## QC ##
+
+multiqc:
+  jobname: "multiqc"
+  mem: "16G"
+  cpus: 4
+  time: "48:00:00"
+  
