@@ -1,8 +1,0 @@
-## Sylvain SCHMITT
-## 25/05/2022
-
-ressources: "ressources.genologin.yaml"
-
-genome: "Dgu_HS1_HYBRID_SCAFFOLD"
-species: "Dicorynia guyanensis"
-protDB: "plants_proteins.fasta"

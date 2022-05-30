@@ -82,7 +82,7 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 ### [repeat\_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
 
   - Tools:
-    [RepeatMasker\`](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
+    [RepeatMasker](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
   - Singularity: docker://pegi3s/repeat\_masker
 
 ## Genes
@@ -90,7 +90,7 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 ### [braker\_prot](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker_prot.smk)
 
   - Tools:
-    [braker.pl\`](https://github.com/Gaius-Augustus/BRAKER#running-braker)
+    [braker.pl](https://github.com/Gaius-Augustus/BRAKER#running-braker)
   - Singularity: docker://blaxterlab/braker
 
 ## Functional annotation

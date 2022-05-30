@@ -11,6 +11,6 @@ rule repeat_masker:
         "docker://pegi3s/repeat_masker"
     threads: 8
     params:
-        species = config["species"]
+        species=lambda wildcards: genomes.loc[wildcards.genome]["species"]
     shell:
         "RepeatMasker -species {params.species} -s {input} -pa {threads}"

@@ -85,14 +85,14 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 ### [repeat_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
 
-* Tools: [RepeatMasker`](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
+* Tools: [RepeatMasker](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
 * Singularity: docker://pegi3s/repeat_masker
   
 ## Genes
 
 ### [braker_prot](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker_prot.smk)
 
-* Tools: [braker.pl`](https://github.com/Gaius-Augustus/BRAKER#running-braker)
+* Tools: [braker.pl](https://github.com/Gaius-Augustus/BRAKER#running-braker)
 * Singularity: docker://blaxterlab/braker
 
 ## Functional annotation
