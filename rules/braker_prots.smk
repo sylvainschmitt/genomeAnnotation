@@ -10,7 +10,7 @@ rule braker_prot:
         "results/benchmarks/braker_prot_{genome}.benchmark.txt"
     singularity:
         "docker://blaxterlab/braker"
-    threads: 4
+    threads: 8
     params:
         species = config["species"]
     shell:

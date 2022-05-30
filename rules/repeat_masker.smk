@@ -9,7 +9,7 @@ rule repeat_masker:
         "results/benchmarks/repeat_masker_{genome}.benchmark.txt"
     singularity:
         "docker://pegi3s/repeat_masker"
-    threads: 4
+    threads: 8
     params:
         species = config["species"]
     shell:
