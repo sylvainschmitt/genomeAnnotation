@@ -1,37 +1,34 @@
----
-title: "gnemeAnnotation"
-author: Sylvain Schmitt
-date: April 28, 2022
-output:
-  github_document: 
-    toc: yes
-    toc_depth: 2
----
+gnemeAnnotation
+================
+Sylvain Schmitt
+April 28, 2022
 
-```{r setup, include=FALSE}
-rm(list = ls()) ; invisible(gc()) ; set.seed(42)
-library(knitr)
-library(tidyverse)
-theme_set(bayesplot::theme_default())
-opts_chunk$set(echo = F, message = F, warning = F, fig.height = 6, fig.width = 8,
-               cache = F, cache.lazy = F)
-```
+  - [Installation](#installation)
+  - [Usage](#usage)
+      - [Locally](#locally)
+      - [HPC](#hpc)
+  - [Workflow](#workflow)
+      - [Transposable elements (TE)](#transposable-elements-te)
+      - [Genes](#genes)
+      - [Functional annotation](#functional-annotation)
 
-[`singularity` & `snakemake`](https://github.com/sylvainschmitt/snakemake_singularity) workflow to annotate genomes.
+[`singularity` &
+`snakemake`](https://github.com/sylvainschmitt/snakemake_singularity)
+workflow to annotate genomes.
 
-```{r dag, fig.cap="Workflow."}
-knitr::include_graphics("dag/dag.svg")
-```
+![Workflow.](dag/dag.svg)
 
 # Installation
 
-- [x] Python ≥3.5
-- [x] Snakemake ≥5.24.1
-- [x] Golang ≥1.15.2
-- [x] Singularity ≥3.7.3
-- [x] This workflow
+  - [x] Python ≥3.5
+  - [x] Snakemake ≥5.24.1
+  - [x] Golang ≥1.15.2
+  - [x] Singularity ≥3.7.3
+  - [x] This workflow
 
-```{bash, eval=F, echo=T}
+<!-- end list -->
+
+``` bash
 # Python
 sudo apt-get install python3.5
 # Snakemake
@@ -63,12 +60,11 @@ cd genomeAnnotation
 
 ## Locally
 
-```{bash, eval=F, echo=T}
+``` bash
 snakemake -np -j 3 --resources mem_mb=10000 # dry run
 snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 snakemake --use-singularity -j 3 --resources mem_mb=10000 # run
 ```
-
 
 ## HPC
 
@@ -83,16 +79,18 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 ## Transposable elements (TE)
 
-### [repeat_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
+### [repeat\_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
 
-* Tools: [RepeatMasker`](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
-* Singularity: docker://pegi3s/repeat_masker
-  
+  - Tools:
+    [RepeatMasker\`](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
+  - Singularity: docker://pegi3s/repeat\_masker
+
 ## Genes
 
-### [braker_prot](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker_prot.smk)
+### [braker\_prot](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker_prot.smk)
 
-* Tools: [braker.pl`](https://github.com/Gaius-Augustus/BRAKER#running-braker)
-* Singularity: docker://blaxterlab/braker
+  - Tools:
+    [braker.pl\`](https://github.com/Gaius-Augustus/BRAKER#running-braker)
+  - Singularity: docker://blaxterlab/braker
 
 ## Functional annotation
