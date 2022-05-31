@@ -1,6 +1,6 @@
 rule braker_prot:
     input:
-        "results/genome/{genome}_softmasked.fa",
+        "results/te/{genome}/{genome}.fa.masked",
         get_protDB
     output:
         directory("results/braker/{genome}")

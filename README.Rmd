@@ -72,7 +72,7 @@ snakemake --use-singularity -j 3 --resources mem_mb=10000 # run
 
 ## HPC
 
-``` bash
+```{bash, eval=F, echo=T}
 module load bioinfo/snakemake-5.25.0 # for test on node
 snakemake -np # dry run
 sbatch job.sh # run
@@ -85,7 +85,7 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 ### [repeat_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
 
-* Tools: [RepeatMasker](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
+* Tools: [RepeatMasker](https://stab.st-andrews.ac.uk/wiki/index.php/Repeatmasker)
 * Singularity: docker://pegi3s/repeat_masker
   
 ## Genes
