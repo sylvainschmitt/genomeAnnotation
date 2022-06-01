@@ -10,6 +10,12 @@ repeat_masker:
   cpus: 8
   time: "48:00:00"
   
+repeat_modeler:
+  jobname: "repeat_modeler"
+  mem: "32G"
+  cpus: 8
+  time: "48:00:00"
+  
 braker_prot:
   jobname: "braker_prot"
   mem: "32G"
