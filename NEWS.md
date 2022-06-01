@@ -1,3 +1,4 @@
+* genomeAnnotation - 0.1.9005: RepeatModeler2
 * genomeAnnotation - 0.1.9004: RepeatMasker with all arguments and outputs
 * genomeAnnotation - 0.1.9003: all species with sample.tsv
 * genomeAnnotation - 0.1.9002: init pipeline with RepeatMasker and braker

@@ -2,7 +2,7 @@ rule repeat_masker:
     input:
         "data/{genome}.fa"
     output:
-        "results/te/{genome}/{genome}.fa.masked"
+        "results/te/RepeatMasker/{genome}/{genome}.fa.masked"
     log:
         "results/logs/repeat_masker_{genome}.log"
     benchmark:
@@ -12,6 +12,6 @@ rule repeat_masker:
     threads: 8
     params:
         species=lambda wildcards: genomes.loc[wildcards.genome]["species"],
-        dir=lambda wildcards: "results/te/" + wildcards.genome
+        dir=lambda wildcards: "results/te/RepeatMasker/" + wildcards.genome
     shell:
         "RepeatMasker -species {params.species} -s {input} -pa {threads} -dir {params.dir} -html -gff -small"

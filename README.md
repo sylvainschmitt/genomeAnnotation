@@ -82,8 +82,14 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 ### [repeat\_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
 
   - Tools:
-    [RepeatMasker](https://www.repeatmasker.org/webrepeatmaskerhelp.html)
+    [RepeatMasker](https://stab.st-andrews.ac.uk/wiki/index.php/Repeatmasker)
   - Singularity: docker://pegi3s/repeat\_masker
+
+### [repeat\_modeler](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_modeler.smk)
+
+  - Tools:
+    [RepeatModeler](https://github.com/Dfam-consortium/RepeatModeler)
+  - Singularity: docker://dfam/tetools
 
 ## Genes
 
