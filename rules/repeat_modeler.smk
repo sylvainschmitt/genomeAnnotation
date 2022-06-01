@@ -18,4 +18,4 @@ rule repeat_modeler:
         "cp {input} {params.dir} ;"
         "cd {params.dir} ; "
         "BuildDatabase -name {params.species}  $genome ; "
-        "RepeatModeler -database dicorynia_guyanensis -pa {threads} LTRStruct > run.out"
+        "RepeatModeler -database {params.species} -pa {threads} -LTRStruct > run.out"
