@@ -13,9 +13,10 @@ rule repeat_modeler:
     threads: 8
     params:
         species=lambda wildcards: re.sub(' ', '_', genomes.loc[wildcards.genome]["species"]),
-        dir=lambda wildcards: "results/te/RepeatModeler/" + wildcards.genome
+        dir=lambda wildcards: "results/te/RepeatModeler/" + wildcards.genome,
+        genome=lambda wildcards: wildcards.genome + ".fa"
     shell:
-        "cp {input} {params.dir} ;"
+        "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
-        "BuildDatabase -name {params.species}  $genome ; "
+        "BuildDatabase -name {params.species}  {params.genome} ; "
         "RepeatModeler -database {params.species} -pa {threads} -LTRStruct > run.out"
