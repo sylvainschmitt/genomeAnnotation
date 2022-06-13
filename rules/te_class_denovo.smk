@@ -8,7 +8,7 @@ rule te_class_denovo:
     benchmark:
         "results/benchmarks/te_class_denovo_{genome}.benchmark.txt"
     singularity:
-        "docker://dfam/tetools"
+        "docker://hatimalmutairi/teclass-2.1.3b"
     params:
         dir=lambda wildcards: "results/te/TEclass/" + wildcards.genome
     shell:

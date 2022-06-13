@@ -8,7 +8,7 @@ rule te_class_repbase:
     benchmark:
         "results/benchmarks/te_class_repbase.benchmark.txt"
     singularity:
-        "docker://dfam/tetools"
+        "docker://hatimalmutairi/teclass-2.1.3b"
     params:
         dir="results/te/RepBase/"
     shell:
