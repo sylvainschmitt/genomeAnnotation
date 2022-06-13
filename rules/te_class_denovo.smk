@@ -14,6 +14,6 @@ rule te_class_denovo:
     shell:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
-        "TEclassTest consensi.fa.classified  > {log} ; "
+        "TEclassTest consensi.fa.classified ; "
         "dir=$(ls | grep consensi.fa.classified_) ; "
         "cp $dir/consensi.fa.classified.lib ."

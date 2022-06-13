@@ -18,4 +18,4 @@ rule repeat_masker:
     shell:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
-        "RepeatMasker -s -xsmall -a -gff -pa {threads} -u -lib  all_repeats_lib.fa {params.genome}.fa > {log}"
+        "RepeatMasker -s -xsmall -a -gff -pa {threads} -u -lib  all_repeats_lib.fa {params.genome}.fa"

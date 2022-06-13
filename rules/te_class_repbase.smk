@@ -14,6 +14,6 @@ rule te_class_repbase:
     shell:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
-        "TEclassTest repbase_viridiplantae.fa > {log} ; "
+        "TEclassTest repbase_viridiplantae.fa ; "
         "dir=$(ls | grep repbase_viridiplantae.fa_) ; "
         "cp $dir/repbase_viridiplantae.fa.lib ."

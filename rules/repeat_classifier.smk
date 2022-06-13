@@ -14,4 +14,4 @@ rule repeat_classifier:
     shell:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
-        "RepeatClassifier -consensi consensi.fa > {log}"
+        "RepeatClassifier -consensi consensi.fa"

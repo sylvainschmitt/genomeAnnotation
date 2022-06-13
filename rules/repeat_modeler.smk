@@ -18,6 +18,6 @@ rule repeat_modeler:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
         "BuildDatabase -name {params.species}  {params.genome} ; "
-        "RepeatModeler -database {params.species} -pa {threads} -LTRStruct > {log} ;"
+        "RepeatModeler -database {params.species} -pa {threads} -LTRStruct ;"
         "dir=$(ls | grep RM) ; "
         "cp $dir/consensi.fa ."
