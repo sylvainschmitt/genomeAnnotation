@@ -77,19 +77,50 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 # Workflow
 
+<!-- https://www.bioinformatics.uni-muenster.de/publication_data/P.californicus_annotation/repeat_masking.hbi?lang=en -->
+
 ## Transposable elements (TE)
 
-### [repeat\_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
+<!-- ### [repet](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repet.smk) -->
 
-  - Tools:
-    [RepeatMasker](https://stab.st-andrews.ac.uk/wiki/index.php/Repeatmasker)
-  - Singularity: docker://pegi3s/repeat\_masker
+<!-- * Tools: [REPET](https://urgi.versailles.inra.fr/Tools/REPET) -->
+
+<!-- * Singularity: docker://urgi/docker_vre_aio -->
 
 ### [repeat\_modeler](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_modeler.smk)
 
   - Tools:
     [RepeatModeler](https://github.com/Dfam-consortium/RepeatModeler)
   - Singularity: docker://dfam/tetools
+
+### [repeat\_classifier](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_classifier.smk)
+
+  - Tools:
+    [RepeatClassifier](https://github.com/Dfam-consortium/RepeatModeler)
+  - Singularity: docker://dfam/tetools
+
+### [te\_class\_denovo](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/te_class_denovo.smk)
+
+  - Tools:
+    [TEclass](https://www.compgen.uni-muenster.de/tools/teclass/index.hbi?lang=en)
+  - Singularity: docker://hatimalmutairi/teclass-2.1.3b
+
+### [te\_class\_repbase](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/te_class_repbase.smk)
+
+  - Tools:
+    [TEclass](https://www.compgen.uni-muenster.de/tools/teclass/index.hbi?lang=en)
+  - Singularity: docker://hatimalmutairi/teclass-2.1.3b
+  - Base: [RepBase](https://www.girinst.org/server/RepBase/index.php)
+
+### [join\_repeats](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/join_repeats.smk)
+
+  - Tools: `cat`
+
+### [repeat\_masker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/repeat_masker.smk)
+
+  - Tools:
+    [RepeatMasker](https://stab.st-andrews.ac.uk/wiki/index.php/Repeatmasker)
+  - Singularity: docker://pegi3s/repeat\_masker
 
 ## Genes
 

@@ -2,8 +2,7 @@ rule repeat_modeler:
     input:
         "data/{genome}.fa"
     output:
-        "results/te/RepeatModeler/{genome}/{genome}-families.fa",
-        "results/te/RepeatModeler/{genome}/{genome}-families.stk"
+        "results/te/RepeatModeler/{genome}/consensi.fa"
     log:
         "results/logs/repeat_modeler_{genome}.log"
     benchmark:
@@ -19,4 +18,6 @@ rule repeat_modeler:
         "cp {input} {params.dir} ; "
         "cd {params.dir} ; "
         "BuildDatabase -name {params.species}  {params.genome} ; "
-        "RepeatModeler -database {params.species} -pa {threads} -LTRStruct > run.out"
+        "RepeatModeler -database {params.species} -pa {threads} -LTRStruct > {log} ;"
+        "dir=$(ls | grep RM) ; "
+        "cp $dir/consensi.fa ."

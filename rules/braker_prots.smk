@@ -1,9 +1,9 @@
 rule braker_prot:
     input:
-        "results/te/{genome}/{genome}.fa.masked",
+        "results/te/RepeatMasker/{genome}/{genome}.fa.masked",
         get_protDB
     output:
-        directory("results/braker/{genome}")
+        directory("results/genes/braker/{genome}")
     log:
         "results/logs/braker_prot_{genome}.log"
     benchmark:

@@ -4,20 +4,50 @@ __default__:
   cpus: 4
   time: "48:00:00"
 
-repeat_masker:
-  jobname: "repeat_masker"
-  mem: "32G"
-  cpus: 8
-  time: "48:00:00"
-  
 repeat_modeler:
   jobname: "repeat_modeler"
   mem: "32G"
   cpus: 8
   time: "96:00:00"
   
+repeat_classifier:
+  jobname: "repeat_classifier"
+  mem: "8G"
+  cpus: 1
+  time: "24:00:00"
+  
+te_class_denovo:
+  jobname: "te_class_denovo"
+  mem: "8G"
+  cpus: 1
+  time: "24:00:00"
+  
+te_class_denovo:
+  jobname: "te_class_denovo"
+  mem: "8G"
+  cpus: 1
+  time: "24:00:00"
+  
+join_repeats:
+  jobname: "join_repeats"
+  mem: "8G"
+  cpus: 1
+  time: "24:00:00"
+
+repeat_masker:
+  jobname: "repeat_masker"
+  mem: "32G"
+  cpus: 8
+  time: "48:00:00"
+
+build_summary:
+  jobname: "build_summary"
+  mem: "8G"
+  cpus: 1
+  time: "24:00:00"
+  
 braker_prot:
   jobname: "braker_prot"
   mem: "32G"
   cpus: 8
-  time: "48:00:00"
+  time: "96:00:00"
