@@ -38,7 +38,7 @@ repeat_masker:
   jobname: "repeat_masker"
   mem: "32G"
   cpus: 8
-  time: "48:00:00"
+  time: "99:00:00"
 
 build_summary:
   jobname: "build_summary"
