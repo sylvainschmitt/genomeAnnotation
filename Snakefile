@@ -13,8 +13,7 @@ def get_protDB(wildcards):
        
 rule all:
     input:
-        # expand("results/te/RepeatMasker/{genome}/{genome}.fa.masked", genome=genomes["genome"]), # masked genome
-        expand("results/te/RepeatMasker/{genome}/{genome}.tbl", genome=genomes["genome"]), # TE summary
+        # expand("results/te/RepeatMasker/{genome}/{genome}.fa.tbl", genome=genomes["genome"]), # TE summary
         expand("results/genes/braker/{genome}", genome=genomes["genome"]) # genes
 
 # Rules #
@@ -26,7 +25,8 @@ include: "rules/te_class_repbase.smk"
 include: "rules/te_class_denovo.smk"
 include: "rules/join_repeats.smk"
 include: "rules/repeat_masker.smk"
-include: "rules/build_summary.smk"
 
 ## Genes ##
-include: "rules/braker_prots.smk"
+include: "rules/genemark.smk"
+include: "rules/prothint.smk"
+include: "rules/braker.smk"

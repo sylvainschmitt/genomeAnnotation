@@ -38,16 +38,22 @@ repeat_masker:
   jobname: "repeat_masker"
   mem: "32G"
   cpus: 8
-  time: "99:00:00"
+  time: "96:00:00"
 
-build_summary:
-  jobname: "build_summary"
-  mem: "8G"
-  cpus: 1
-  time: "24:00:00"
+genemark:
+  jobname: "genemark"
+  mem: "32G"
+  cpus: 8
+  time: "96:00:00"
   
-braker_prot:
-  jobname: "braker_prot"
+prothint:
+  jobname: "prothint"
+  mem: "32G"
+  cpus: 8
+  time: "96:00:00"
+  
+braker:
+  jobname: "braker"
   mem: "32G"
   cpus: 8
   time: "96:00:00"

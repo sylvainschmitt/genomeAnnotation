@@ -4,7 +4,8 @@ rule repeat_masker:
         "results/te/JoinRepeats/{genome}/all_repeats_lib.fa"
     output:
         "results/te/RepeatMasker/{genome}/{genome}.fa.masked",
-        "results/te/RepeatMasker/{genome}/{genome}.out"
+        "results/te/RepeatMasker/{genome}/{genome}.fa.out",
+        "results/te/RepeatMasker/{genome}/{genome}.fa.tbl"
     log:
         "results/logs/repeat_masker_{genome}.log"
     benchmark:

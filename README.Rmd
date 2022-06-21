@@ -122,9 +122,19 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 ## Genes
 
-### [braker_prot](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker_prot.smk)
+### [genemark](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/genemark.smk)
+
+* Tools: [gmes_petap.pl](http://exon.gatech.edu/GeneMark/)
+* Singularity: docker://blaxterlab/braker
+
+### [braker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker.smk)
+
+* Tools: [prothint.py](https://github.com/gatech-genemark/ProtHint)
+* Singularity: docker://blaxterlab/braker
+
+### [braker](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/braker.smk)
 
 * Tools: [braker.pl](https://github.com/Gaius-Augustus/BRAKER#running-braker)
-* Singularity: docker://blaxterlab/braker
+* Singularity: docker://hamiltonjp/braker2:a765b80
 
 ## Functional annotation
