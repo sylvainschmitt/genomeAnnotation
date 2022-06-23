@@ -14,5 +14,5 @@ rule braker:
     params:
         species=lambda wildcards: genomes.loc[wildcards.genome]["species"]
     shell:
-        "braker.pl --cores={threads} --species='{params.species}' --makehub -workingdir={output} --genome=genome.fa --hints=prothint_augustus.gff --softmasking"
+        "braker.pl --cores={threads} --species='{params.species}' --workingdir={output} --genome={input[0]} --hints={input[1]} --softmasking"
         

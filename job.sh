@@ -12,6 +12,10 @@
 module purge
 module load bioinfo/snakemake-5.25.0
 module load system/singularity-3.7.3
+module load bioinfo/GeneMark-v4.69 # to work with braker, not included in the sif
+module load system/Python-3.6.3
+export AUGUSTUS_CONFIG_PATH=/work/sschmitt/genomeAnnotation/augustus/config
+export GENEMARK_PATH=/usr/local/bioinfo/src/GeneMark/GeneMark-v4.69
 
 # Variables
 CONFIG=config/ressources.genologin.yaml
@@ -20,7 +24,7 @@ CORES=100
 mkdir -p snake_subjob_log
 
 # Workflow
-snakemake -s Snakefile --use-singularity -j $CORES --cluster-config $CONFIG --cluster "$COMMAND" --keep-going
+snakemake -s Snakefile --use-singularity -B "$GENEMARK_PATH,$AUGUSTUS_CONFIG_PATH" -j $CORES --cluster-config $CONFIG --cluster "$COMMAND" --keep-going
 
 ## Session informations
 echo '########################################'

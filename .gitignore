@@ -24,3 +24,6 @@ report.html
 *.bed
 *.sam
 *.tsv
+# braker
+augustus
+.gm_key

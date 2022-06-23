@@ -3,7 +3,7 @@ rule genemark:
         "results/te/RepeatMasker/{genome}/{genome}.fa.masked",
         get_protDB
     output:
-        "results/genes/GeneMark/{genome}/output/genemark.gtf"
+        "results/genes/GeneMark/{genome}/genemark.gtf"
     log:
         "results/logs/genemark_{genome}.log"
     benchmark:
