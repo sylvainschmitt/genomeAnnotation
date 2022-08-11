@@ -8,7 +8,7 @@ rule rnammer:
     benchmark:
         "results/benchmarks/rnammer_{genome}.benchmark.txt"
     singularity:
-        "docker://quay.io/biocontainer/trinotate"
+        "docker://ss93/trinotate-3.2.1"
     threads: 1
     shell:
         "module load bioinfo/rnammer-1.2 ; "
