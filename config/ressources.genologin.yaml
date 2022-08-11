@@ -57,3 +57,88 @@ braker:
   mem: "32G"
   cpus: 8
   time: "96:00:00"
+  
+prep_trsc:
+  jobname: "prep_trsc"
+  mem: "4"
+  cpus: 1
+  time: "1:00:00"
+  
+bedtools_getfasta:
+  jobname: "bedtools_getfasta"
+  mem: "4"
+  cpus: 1
+  time: "1:00:00"
+
+transdecoder:
+  jobname: "transdecoder"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+
+trinotate_db:
+  jobname: "trinotate_db"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+  
+tmhmm:
+  jobname: "tmhmm"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+  
+hmmscan:
+  jobname: "hmmscan"
+  mem: "40G"
+  cpus: 10
+  time: "96:00:00"
+  
+blastp:
+  blastp: "blastp"
+  mem: "40G"
+  cpus: 10
+  time: "96:00:00"
+  
+blastx:
+  blastp: "blastx"
+  mem: "40G"
+  cpus: 10
+  time: "96:00:00"
+
+rnammer:
+  blastp: "rnammer"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+  
+rename_fasta_headers:
+  jobname: "rename_fasta_headers"
+  mem: "4"
+  cpus: 1
+  time: "1:00:00"
+
+signalp:
+  blastp: "signalp"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+  
+rename_gff:
+  jobname: "rename_gff"
+  mem: "4"
+  cpus: 1
+  time: "1:00:00"
+
+trinotate_load:
+  blastp: "trinotate_load"
+  mem: "32G"
+  cpus: 1
+  time: "96:00:00"
+  
+trinotate_report:
+  jobname: "trinotate_report"
+  mem: "4"
+  cpus: 1
+  time: "1:00:00" 
+  

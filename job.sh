@@ -24,7 +24,7 @@ CORES=100
 mkdir -p snake_subjob_log
 
 # Workflow
-snakemake -s Snakefile --use-singularity -B "$GENEMARK_PATH,$AUGUSTUS_CONFIG_PATH" -j $CORES --cluster-config $CONFIG --cluster "$COMMAND" --keep-going
+snakemake -s Snakefile --use-singularity --singularity-args "-B \"\$GENEMARK_PATH,\$AUGUSTUS_CONFIG_PATH\"" -j $CORES --cluster-config $CONFIG --cluster "$COMMAND" --keep-going
 
 ## Session informations
 echo '########################################'

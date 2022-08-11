@@ -3,7 +3,7 @@ rule braker:
         "results/te/RepeatMasker/{genome}/{genome}.fa.masked",
         "results/genes/ProtHint/{genome}/prothint_augustus.gff"
     output:
-        directory("results/genes/braker/{genome}")
+        "results/genes/braker/{genome}/braker.gtf"
     log:
         "results/logs/braker_{genome}.log"
     benchmark:

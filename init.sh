@@ -5,4 +5,4 @@ cp -r $AUGUSTUS_BIN_PATH/../config/ augustus/
 exit
 rm braker2_a765b80.sif
 module load bioinfo/GeneMark-v4.69
-# add line to copy the .gm_key locally
+cp /usr/local/bioinfo/src/GeneMark/gm_key ~/.gm_key

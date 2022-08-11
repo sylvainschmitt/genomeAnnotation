@@ -138,3 +138,65 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 * Singularity: docker://hamiltonjp/braker2:a765b80
 
 ## Functional annotation
+
+### [prep trsc](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/prep_trsc.smk)
+
+* Tools: [awk](https://connect.ed-diamond.com/GNU-Linux-Magazine/glmf-131/awk-le-langage-script-de-reference-pour-le-traitement-de-fichiers)
+
+### [trinotate db](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/trinotate_db.smk)
+
+* Tools: [Build_Trinotate_Boilerplate_SQLite_db.pl](https://github.com/Trinotate/Trinotate.github.io/wiki/Software-installation-and-data-required#2-sequence-databases-required)
+* Singularity: docker://ss93/trinotate-3.2.1
+
+### [transdecoder](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/transdecoder.smk)
+
+* Tools: [TransDecoder](https://github.com/TransDecoder/TransDecoder/wiki)
+* Singularity: oras://registry.forgemia.inra.fr/gafl/singularity/transdecoder/transdecoder:latest
+
+### [tmhmm](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/tmhmm.smk)
+
+* Tools: [tmhmm](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0)
+* Singularity: docker://crhisllane/tmhmm:latest
+
+### [hmmscan](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/hmmscan.smk)
+
+* Tools: [hmmscan](http://eddylab.org/software/hmmer/Userguide.pdf)
+* Singularity: docker://dockerbiotools/hmmer:latest
+
+### [blastp](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/blastp.smk)
+
+* Tools: [blastp](https://ftp.ncbi.nlm.nih.gov/pub/factsheets/HowTo_BLASTGuide.pdf)
+* Singularity: docker://ncbi/blast
+
+### [blastx](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/blastx.smk)
+
+* Tools: [blastx](https://ftp.ncbi.nlm.nih.gov/pub/factsheets/HowTo_BLASTGuide.pdf)
+* Singularity: docker://ncbi/blast
+
+### [rnammer](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/rnammer.smk)
+
+* Tools: [RnammerTranscriptome.pl](https://github.com/Trinotate/Trinotate.github.io/wiki/Software-installation-and-data-required#running-rnammer-to-identify-rrna-transcripts)
+* Singularity: docker://quay.io/biocontainer/trinotate
+
+### [rename_fasta_headers](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/rename_fasta_headers.smk)
+
+* Script: [rename_fasta_headers.py](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/scripts/rename_fasta_headers.py)
+
+### [signalp](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/signalp.smk)
+
+* Tools: [signalp](https://services.healthtech.dtu.dk/service.php?SignalP-5.0)
+* Singularity: https://github.com/biocorecrg/interproscan_docker    
+
+### [rename_gff](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/rename_gff.smk)
+
+* Script: [rename_gff.R](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/scripts/rename_gff.R)
+
+### [trinotate load](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/trinotate_load.smk)
+
+* Tools: [Trinotate LOAD_*](https://github.com/Trinotate/Trinotate.github.io/wiki/Loading-generated-results-into-a-Trinotate-SQLite-Database-and-Looking-the-Output-Annotation-Report)
+* Singularity: docker://ss93/trinotate-3.2.1
+
+### [trinotate report](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/trinotate_report.smk)
+
+* Tools: [Trinotate report](https://github.com/Trinotate/Trinotate.github.io/wiki/Loading-generated-results-into-a-Trinotate-SQLite-Database-and-Looking-the-Output-Annotation-Report#trinotate-output-an-annotation-report)
+* Singularity: docker://ss93/trinotate-3.2.1
