@@ -2,7 +2,7 @@ rule trinotate_db:
     output:
         "results/annotation/trinotate/{genome}/db/trsc.sqlite",
         "results/annotation/trinotate/{genome}/db/uniprot_sprot.pep",
-        "results/annotation/trinotate/{genome}/db/Pfam-A.hmm.gz"
+        "results/annotation/trinotate/{genome}/db/Pfam-A.hmm"
     log:
         "results/logs/trinotate_db_{genome}.log"
     benchmark:

@@ -1,7 +1,7 @@
 rule hmmscan:
     input:
         "results/annotation/transdecoder/{genome}/trsc.fa.transdecoder.pep",
-        "results/annotation/trinotate/{genome}/db/Pfam-A.hmm.gz"
+        "results/annotation/trinotate/{genome}/db/Pfam-A.hmm"
     output:
         "results/annotation/hmmer/{genome}/TrinotatePFAM.out"
     log:
