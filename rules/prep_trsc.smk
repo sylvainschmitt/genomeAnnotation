@@ -12,6 +12,6 @@ rule prep_trsc:
         "oras://registry.forgemia.inra.fr/gafl/singularity/bedtools/bedtools:latest"
     threads: 1
     shell:
-        "cat {input} | awk \'{{if($3 == \"transcript\") {{print}}}}\' > {output[0]}"
+        "cat {input} | awk \'{{if($3 == \"transcript\") {{print}}}}\' > {output[0]} ; "
         "cat {output[0]} | awk \'{{if($3 == \"transcript\") {{print$9\"\\t\"$9}}}}\' | awk \'{{gsub(/.t[0-9]/,\"\",$2);print}}\' > {output[1]}"
         

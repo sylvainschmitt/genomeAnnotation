@@ -15,6 +15,6 @@ rule transdecoder:
         dir="results/annotation/transdecoder/{genome}"
     shell:
         "TransDecoder.LongOrfs -t {input[0]} --gene_trans_map {input[1]} -S -O {params.dir} ; "
-        "cd {params.dir}"
-        "TransDecoder.Predict -t {input[0]} -O {output} "
+        "cd {params.dir} ; "
+        "TransDecoder.Predict -t {input[0]}"
         
