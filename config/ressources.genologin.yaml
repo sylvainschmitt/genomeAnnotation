@@ -95,19 +95,19 @@ hmmscan:
   time: "96:00:00"
   
 blastp:
-  blastp: "blastp"
+  jobname: "blastp"
   mem: "40G"
   cpus: 10
   time: "96:00:00"
   
 blastx:
-  blastp: "blastx"
+  jobname: "blastx"
   mem: "40G"
   cpus: 10
   time: "96:00:00"
 
 rnammer:
-  blastp: "rnammer"
+  jobname: "rnammer"
   mem: "32G"
   cpus: 1
   time: "96:00:00"
@@ -119,7 +119,7 @@ rename_fasta_headers:
   time: "1:00:00"
 
 signalp:
-  blastp: "signalp"
+  jobname: "signalp"
   mem: "32G"
   cpus: 1
   time: "96:00:00"
@@ -131,7 +131,7 @@ rename_gff:
   time: "1:00:00"
 
 trinotate_load:
-  blastp: "trinotate_load"
+  jobname: "trinotate_load"
   mem: "32G"
   cpus: 1
   time: "96:00:00"
