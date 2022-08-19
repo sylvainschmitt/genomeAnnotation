@@ -2,7 +2,7 @@ rule rnammer:
     input:
         "results/annotation/trinotate/{genome}/trsc.fa"
     output:
-        "results/annotation/rnammer/{genome}/tsc.fa.rnammer.gff"
+        "results/annotation/rnammer/{genome}/trsc.fa.rnammer.gff"
     log:
         "results/logs/rnammer_{genome}.log"
     benchmark:

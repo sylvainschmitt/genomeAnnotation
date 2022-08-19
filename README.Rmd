@@ -200,3 +200,14 @@ snakemake --dag | dot -Tsvg > dag/dag.svg # dag
 
 * Tools: [Trinotate report](https://github.com/Trinotate/Trinotate.github.io/wiki/Loading-generated-results-into-a-Trinotate-SQLite-Database-and-Looking-the-Output-Annotation-Report#trinotate-output-an-annotation-report)
 * Singularity: docker://ss93/trinotate-3.2.1
+
+### [trinotate summary](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/trinotate_summaryt.smk)
+
+* Tools: [count_table_fields.pk](https://github.com/Trinotate/Trinotate.github.io/wiki/Loading-generated-results-into-a-Trinotate-SQLite-Database-and-Looking-the-Output-Annotation-Report#trinotate-output-an-annotation-report)
+* Singularity: docker://ss93/trinotate-3.2.1
+
+### [trinotate go](https://github.com/sylvainschmitt/genomeAnnotation/blob/main/rules/trinotate_go.smk)
+
+* Tools: [extract_GO_assignments_from_Trinotate_xls.pl](https://github.com/Trinotate/Trinotate.github.io/wiki/Loading-generated-results-into-a-Trinotate-SQLite-Database-and-Looking-the-Output-Annotation-Report#trinotate-output-an-annotation-report)
+* Singularity: docker://ss93/trinotate-3.2.1
+

@@ -1,3 +1,4 @@
+* genomeAnnotation - 0.1.9010: trinotate summary and go
 * genomeAnnotation - 0.1.9009: integrating transcriptoAechmea annotation instead of FAnf
 * genomeAnnotation - 0.1.9008: Preparing braker mess, test
 * genomeAnnotation - 0.1.9007: GeneMark-ES & ProtHint
