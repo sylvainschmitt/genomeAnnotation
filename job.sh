@@ -13,6 +13,7 @@ module purge
 module load bioinfo/snakemake-5.25.0
 module load system/singularity-3.7.3
 module load bioinfo/GeneMark-v4.69 # to work with braker, not included in the sif
+module load bioinfo/rnammer-1.2
 module load system/Python-3.6.3
 export AUGUSTUS_CONFIG_PATH=/work/sschmitt/genomeAnnotation/augustus/config
 export GENEMARK_PATH=/usr/local/bioinfo/src/GeneMark/GeneMark-v4.69

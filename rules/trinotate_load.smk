@@ -8,7 +8,7 @@ rule trinotate_load:
         signalp = "results/annotation/signalp/{genome}/signalp.renamed.out",
         tmhmm = "results/annotation/tmhmm/{genome}/tmhmm.out", 
         hmmer = "results/annotation/hmmer/{genome}/TrinotatePFAM.out",
-        rnammer = "results/annotation/rnammer/{genome}/tsc.fa.rnammer.gff",
+        rnammer = "results/annotation/rnammer/{genome}/trsc.fa.rnammer.gff",
         db = "results/annotation/trinotate/{genome}/db/trsc.sqlite"
     output:
         "results/annotation/trinotate/{genome}/trsc.sqlite"

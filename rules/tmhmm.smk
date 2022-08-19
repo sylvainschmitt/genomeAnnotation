@@ -11,5 +11,5 @@ rule tmhmm:
         "docker://crhisllane/tmhmm:latest"
     threads: 1
     shell:
-        "tmhmm --short < {input} > {output}"
+        "tmhmm -f {input} > {output}"
         

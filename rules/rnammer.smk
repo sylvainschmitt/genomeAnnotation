@@ -10,8 +10,11 @@ rule rnammer:
     singularity:
         "docker://ss93/trinotate-3.2.1"
     threads: 1
+    params:
+        wd="results/annotation/rnammer/{genome}/"
     shell:
-        "module load bioinfo/rnammer-1.2 ; "
-        "$TRINOTATE_HOME/util/rnammer_support/RnammerTranscriptome.pl ---transcriptome {input} "
+        "cp {input} {params.wd} ; "
+        "cd {params.wd} ; "
+        "/usr/local/bin/RnammerTranscriptome.pl --transcriptome trsc.fa "
         "--path_to_rnammer /usr/local/bioinfo/src/RNAmmer/rnammer-1.2/rnammer"
         
