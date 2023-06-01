@@ -1,7 +1,9 @@
-gnemeAnnotation
+genomeAnnotation
 ================
 Sylvain Schmitt
 April 28, 2022
+
+[![DOI](https://zenodo.org/badge/495792757.svg)](https://zenodo.org/badge/latestdoi/495792757)
 
   - [Installation](#installation)
   - [Usage](#usage)
